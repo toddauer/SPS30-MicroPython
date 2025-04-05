@@ -1,16 +1,18 @@
-# SPS30-MicroPython
+# SPS30 MicroPython Library
 
-This repository contains code for interfacing with the SPS30 particulate matter sensor using MicroPython. The code allows you to read air quality measurements such as PM1.0, PM2.5, PM4.0, PM10.0, and particle counts in various size ranges. It also includes functionality to start/stop measurements, read the firmware version, and activate cleaning mode.
+This repository provides a MicroPython library to interact with the Sensirion SPS30 particulate matter sensor via I2C. It allows you to read measurements and calculate the Air Quality Index (AQI) based on the PM2.5 readings.
 
-Features:
-Start and stop measurements.
+## Features
 
-Read PM concentrations (PM1.0, PM2.5, PM4.0, PM10.0).
+- Read particulate matter concentrations (PM1.0, PM2.5, PM4.0, PM10.0)
+- Read particle number concentrations (NC0.5, NC1.0, NC2.5, NC4.0, NC10.0)
+- Calculate AQI for PM2.5
+- Start and stop measurements
+- Check if data is ready for reading
+- CRC verification for data integrity
 
-Read particle count data for various sizes (NC0.5, NC1.0, NC2.5, NC4.0, NC10.0).
+## Requirements
 
-Firmware version reading.
-
-Enter and complete cleaning mode.
-
-Read and print raw sensor data in a human-readable format.
+- MicroPython (compatible with ESP32/ESP8266 or other supported devices)
+- Sensirion SPS30 sensor
+- I2C communication setup
